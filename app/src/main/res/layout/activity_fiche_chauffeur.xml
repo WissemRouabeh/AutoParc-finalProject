@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ **all code wrote by wissem rouabeh**
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fiches.fiche_chauffeur">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/toolbarbg"
+            >
+            <TextView
+                android:id="@+id/resultat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="5dp"
+                android:text="resultat"
+                android:layout_alignParentTop="true"
+                android:textSize="14dp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/edittxt"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignBottom="@+id/edit"
+                android:layout_toLeftOf="@+id/edit"
+                android:text="MODIFIER"
+                android:textColor="@color/white"
+                android:textSize="40px"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="40dp"
+                android:layout_height="41dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/edit"
+                android:tint="@color/white" />
+            <ImageView
+                android:id="@+id/pic"
+                android:layout_width="110dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/a006"
+                android:tint="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/nom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:paddingHorizontal="2dp"
+                    android:text="wissem"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/prenom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:paddingHorizontal="1dp"
+                    android:text="Rouabeh"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+        </RelativeLayout>
+        //2cardview
+
+        <LinearLayout
+            android:id="@+id/cards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/nbr_ch"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/laybgn"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Missions"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/input_nbr_ms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="---"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/nbr_vh"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/laybgn"
+                android:clickable="true"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Voitures"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/input_nbr_vh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="---"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+        -------items----
+        <ScrollView
+            android:layout_below="@+id/cards"
+            android:layout_above="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nom:"
+                        android:textSize="20sp"
+                        android:gravity="right"/>
+                    <TextView
+                        android:id="@+id/viewnom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="nom"
+                        android:paddingLeft="15dp"
+                        android:textSize="20sp"/>
+                    <EditText
+                        android:id="@+id/changenom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="rouabeh"
+                        android:paddingLeft="15dp"
+                        android:singleLine="true"
+                        android:textSize="20sp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Prenom:"
+                        android:gravity="right"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:id="@+id/viewprenom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="prenom"
+                        android:paddingLeft="15dp"
+                        android:textSize="20sp"/>
+                    <EditText
+                        android:id="@+id/changeprenom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="rouabeh"
+                        android:singleLine="true"
+                        android:paddingLeft="15dp"
+                        android:textSize="20sp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Matricule"
+                        android:gravity="right"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/matricule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="matricule"
+                        android:paddingLeft="15dp"
+                        android:textSize="20sp" />
+                    <EditText
+                        android:id="@+id/changemat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="matricule"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:maxLength="10"
+                        android:paddingLeft="15dp"
+                        android:textSize="20sp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="N° cin:"
+                        android:gravity="right"
+                        android:textSize="20sp"/>
+                    <TextView
+                        android:id="@+id/cin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cin"
+                        android:paddingLeft="15dp"
+                        android:textSize="20sp"/>
+                    <EditText
+                        android:id="@+id/changecin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="cin"
+                        android:paddingLeft="15dp"
+                        android:singleLine="true"
+                        android:maxLength="8"
+                        android:inputType="number"
+                        android:textSize="20sp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="102dp"
+                        android:layout_height="53dp"
+                        android:gravity="right"
+                        android:text="Date de recrutement:"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/datein"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/ic_list_black_24dp"
+                        android:textSize="20sp"
+                        android:paddingLeft="15dp"
+                        android:clickable="false"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+        ----------------
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_delete_stroke"
+            android:text="Supprimer"
+            android:textColor="@color/red"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+        <LinearLayout
+            android:id="@+id/modifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/submit_update"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_appliquer_stroke"
+                android:text="Appliquer"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="10dp"/>
+            <Button
+                android:id="@+id/annuler"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_delete_stroke"
+                android:layout_toRightOf="@+id/submit_update"
+                android:text="Annuler"
+                android:textColor="@color/red"
+                android:padding="10dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

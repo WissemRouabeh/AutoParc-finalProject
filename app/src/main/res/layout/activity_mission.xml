@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insertdata.mission">
+
+    <TextView
+        android:id="@+id/resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="resultat"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultat"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/formulaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/laybgn"
+                android:padding="1.5dp">
+
+                <ImageView
+                    android:id="@+id/addimg"
+                    android:layout_width="66dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="7dp"
+                    android:layout_marginTop="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_assignment_black_24dp"
+                    android:tint="@color/colorPrimaryDark" />
+                ====block1
+
+
+                ====block2
+
+                <LinearLayout
+                    android:id="@+id/block2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addimg"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:padding="5dp"
+                        android:text="Date de commencement"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/bgn"
+                        android:drawableRight="@drawable/ic_date_range_black_24dp"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                ====block3
+
+                <LinearLayout
+                    android:id="@+id/block3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/block2"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:padding="5dp"
+                        android:text="Chauffeur responsable"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mchauffeur"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="3dp"
+
+                        android:background="@drawable/bgn"
+                        android:drawableRight="@drawable/ic_list_black_24dp"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                ====block4
+
+                <LinearLayout
+                    android:id="@+id/block4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/block3"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:padding="5dp"
+                        android:text="Voiture à utiliser"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/mvoiture"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/bgn"
+                        android:drawableRight="@drawable/ic_list_black_24dp"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+                ====block5
+
+                <LinearLayout
+                    android:id="@+id/block5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/block4"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/trjt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:padding="3dp"
+                        android:text="Trajet"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:padding="5dp"
+                            android:text="de:"
+                            android:textSize="18dp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/spinnerde"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content">
+
+                        </Spinner>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-condensed"
+                            android:padding="5dp"
+                            android:text="vers:"
+                            android:textSize="18dp"
+                            android:textStyle="italic" />
+
+                        <Spinner
+                            android:id="@+id/spinnervers"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content">
+
+                        </Spinner>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/ajouter_tr"
+                        android:layout_width="226dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_appliquer_stroke"
+                        android:text="Ajouter trajet"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnajout"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/formulaire"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_bgn"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Ajouter"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

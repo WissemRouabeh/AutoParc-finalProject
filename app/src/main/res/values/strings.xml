@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AutoParc</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+    <string-array name="puissance">
+        <item>5 CV</item>
+        <item>6 CV</item>
+        <item>7 CV</item>
+        <item>8 CV</item>
+        <item>9 CV</item>
+        <item>10 CV</item>
+        <item>11 CV</item>
+        <item>12 CV</item>
+        <item>13 CV</item>
+        <item>14 CV</item>
+        <item>+14 CV</item>
+    </string-array>
+    <string-array name="carburant">
+        <item>GASOIL</item>
+        <item>ESSENCE</item>
+    </string-array>
+
+    <string-array name="sit_act">
+        <item>En circulation</item>
+        <item>En cours de réparation</item>
+        <item>A rébutée</item>
+    </string-array>
+</resources>

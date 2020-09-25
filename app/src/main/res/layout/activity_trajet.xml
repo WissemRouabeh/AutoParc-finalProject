@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ **all code wrote by wissem rouabeh**
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insertdata.trajet">
+    <TextView
+        android:id="@+id/resultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"/>
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/input"
+        android:textSize="18sp"
+        android:background="@drawable/popup_stroke"
+        android:drawableTint="@color/colorPrimary"
+        android:maxLength="78"
+        android:paddingStart="10dp"
+        android:paddingEnd="4dp"
+        android:layout_below="@+id/resultat"/>
+    <Button
+        android:id="@+id/btnajout"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/input"
+        android:layout_margin="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_bgn"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Ajouter"
+        android:textColor="@color/white" />
+    <Button
+        android:id="@+id/btretour"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@+id/btnajout"
+        android:layout_below="@+id/input"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_appliquer_stroke"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Retour"
+        android:textColor="@color/colorPrimaryDark" />
+    <ListView
+        android:background="@drawable/popup_stroke"
+        android:layout_marginTop="10dp"
+        android:id="@+id/listtr"
+        android:layout_below="@+id/btnajout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp" >
+    </ListView>
+
+</RelativeLayout>

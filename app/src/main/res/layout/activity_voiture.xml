@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insertdata.voiture">
+    <TextView
+        android:id="@+id/resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="resultat"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/resultat">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/formulaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="6dp"
+            android:background="@drawable/laybgn"
+            android:padding="8dp"
+            >
+
+            <ImageView
+                android:id="@+id/addimg"
+                android:layout_width="66dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_directions_car_black_48"
+                android:tint="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addimg"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Marque:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/model"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bgn"
+                    android:fontFamily="sans-serif-condensed"
+                    android:maxLength="30"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Matricule:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/l1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/chang1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:maxLength="30"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+                        android:text="  09 - "
+                        android:textSize="17dp"
+                        android:textStyle="italic|bold" />
+
+                    <EditText
+                        android:id="@+id/numserie"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_toRightOf="@+id/chang1"
+                        android:background="@drawable/bgn"
+                        android:fontFamily="sans-serif-condensed"
+                        android:maxLength="6"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:singleLine="true"
+                        android:digits="0123456789"
+                        android:inputType="textFilter"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Carburant:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/carburant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/carburant">
+                </Spinner>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Puissance:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/puissance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/puissance">
+                </Spinner>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Date de mise au circulation:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/bgn"
+                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Situation actuelle:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/sit_act"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/sit_act">
+                </Spinner>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Kilometrage:"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/kilometrage"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bgn"
+                    android:fontFamily="sans-serif-condensed"
+                    android:maxLength="6"
+                    android:inputType="number"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:singleLine="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:padding="5dp"
+                    android:text="Consommation moyenne:%"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/consommation"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bgn"
+                    android:fontFamily="sans-serif-condensed"
+                    android:maxLength="4"
+                    android:inputType="numberDecimal"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="5dp"
+                    android:singleLine="true" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnajout"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/formulaire"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_bgn"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Ajouter"
+            android:textColor="@color/white" />
+
+
+
+    </RelativeLayout>
+</ScrollView>
+
+</RelativeLayout>

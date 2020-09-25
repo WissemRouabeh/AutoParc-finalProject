@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gafsa.rouabeh.wissem.autoparc">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/azerty_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dashboard" />
+        <activity android:name=".chauffeurs" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".insertdata.chauffeur"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".insertdata.voiture"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".insertdata.mission"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Voitures"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Missions"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".fiches.fiche_chauffeur"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".fiches.fiche_voiture"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".dashboard_view">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dash_ch.firstlogin_chauffeur">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".utilisateurs" />
+        <activity
+            android:name=".fiches.fiche_utilisateur"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".fiches.fiche_mission"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".insertdata.utilisateur"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".dash_ch.chauffeur_dashboard" />
+        <activity android:name=".dash_ch.listm" />
+        <activity android:name=".dash_ch.listv" />
+        <activity android:name=".insertdata.voiture_carburant" />
+        <activity android:name=".fiches.fiche_bon" />
+        <activity
+            android:name=".Logs"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".recuper_pwd"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".insertdata.trajet" />
+        <activity android:name=".Changeinfos"></activity>
+    </application>
+
+</manifest>

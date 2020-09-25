@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".chauffeurs">
+
+    <TextView
+        android:id="@+id/resultat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"/>
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchbar"
+        android:background="@drawable/bgn"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawableTint="@color/colorPrimary"
+        android:singleLine="true"
+        android:maxLength="20"
+        android:paddingStart="10dp"
+        android:paddingEnd="5dp"
+        android:layout_below="@+id/resultat"/>
+
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:id="@+id/params"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/searchbar"
+        android:paddingVertical="2dp"
+        >
+
+        <TextView
+            android:id="@+id/sort"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/outline_reorder_black_24dp"
+            android:drawableTint="@color/colorPrimary"
+            android:gravity="center"
+            android:paddingStart="3dp"
+            android:text="Trier"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/sum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:gravity="right"
+            android:paddingRight="20dp"
+            />
+    </LinearLayout>
+    <View
+        android:id="@+id/barline"
+        android:layout_width="match_parent"
+        android:padding="3dp"
+        android:layout_height="0.5dp"
+        android:background="@color/grey"
+        android:backgroundTint="@color/grey"
+        android:layout_below="@+id/params"
+        android:layout_above="@+id/listview"/>
+
+    <ListView
+        android:background="@drawable/popup_stroke"
+        android:layout_marginTop="4dp"
+        android:id="@+id/listvh"
+        android:layout_below="@+id/params"
+        android:layout_above="@+id/bottomnavbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp">
+    </ListView>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomnavbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:menu="@menu/itemsnav"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"/>
+
+    --        app:itemIconTint="@drawable/selector"
+
+
+
+</RelativeLayout>

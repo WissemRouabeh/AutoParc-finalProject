@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ **all code wrote by wissem rouabeh**
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/popup_stroke">
+
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/Aujourdhui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aujourd'hui" />
+
+        <RadioButton
+
+            android:id="@+id/suiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pas encore commencé" />
+
+        <RadioButton
+
+            android:id="@+id/terminer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terminer" />
+
+    </RadioGroup>
+</RelativeLayout>

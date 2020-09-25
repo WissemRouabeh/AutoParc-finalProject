@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ **all code wrote by wissem rouabeh**
+  -->
+
+<!--
+  ~ **all code wrote by wissem rouabeh**
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/popup_stroke">
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/Administrateur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administrateur" />
+
+        <RadioButton
+            android:id="@+id/Personnel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personnel" />
+        <RadioButton
+            android:id="@+id/PersonnelF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personnel Fonctionne" />
+        <RadioButton
+            android:id="@+id/PersonnelS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personnel Suspendu" />
+
+        <RadioButton
+            android:id="@+id/Chauffeur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chauffeur" />
+        <RadioButton
+            android:id="@+id/ChauffeurF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chauffeur Fonctionne" />
+        <RadioButton
+            android:id="@+id/ChauffeurS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chauffeur Suspendu" />
+
+        <RadioButton
+            android:id="@+id/Fonctionne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fonctionne" />
+
+        <RadioButton
+            android:id="@+id/Suspendu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suspendu" />
+
+    </RadioGroup>
+</RelativeLayout>

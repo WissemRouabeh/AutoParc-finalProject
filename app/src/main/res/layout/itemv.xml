@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@drawable/itemlay"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/srvc"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/a003"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="4dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="4dp"
+            android:layout_toRightOf="@+id/srvc"
+            android:padding="2dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Marque"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:id="@+id/model"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Matricule"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:id="@+id/matric"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Date mise en circu"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:id="@+id/date"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="5 cv essence"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:id="@+id/info"/>
+
+            <TextView
+                android:id="@+id/situation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="situation"
+                android:gravity="right"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+

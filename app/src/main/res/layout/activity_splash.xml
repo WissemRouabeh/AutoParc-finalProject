@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".splash">
+
+    <ImageView
+        android:id="@+id/imagesplash"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="2dp"
+        android:src="@drawable/azertyb"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="AutoParc"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:layout_below="@+id/imagesplash"
+        />
+    <TextView
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:text="Veuillez bien assurer que vous êtes connecté à internet."
+        android:textStyle="bold"
+        android:layout_margin="20dp"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:layout_below="@+id/titre"
+        />
+    <TextView
+        android:id="@+id/resultat"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+        android:text="2018-2019"
+        android:textStyle="bold|italic"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

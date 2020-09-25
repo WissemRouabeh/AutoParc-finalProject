@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ **all code wrote by wissem rouabeh**
+  -->
+
+<!--
+  ~ **all code wrote by wissem rouabeh**
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/popup_stroke">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/logsicon"
+            android:id="@+id/titre"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:paddingBottom="10dp"
+            android:tint="@color/colorPrimaryDark"
+            />
+
+        <View
+            android:id="@id/vue"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/titre"
+            android:layout_marginHorizontal="15dp"
+            android:tint="@color/darkgrey" />
+
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vue"
+            android:text="içi les données"
+            android:textSize="16dp"
+            android:layout_marginStart="1dp"
+            android:textStyle="italic" />
+
+
+        <Button
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/msg"
+            android:background="@drawable/laybgn"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:text="Fermer"
+            android:id="@+id/oui"/>
+    </RelativeLayout>
+</ScrollView>
+
+
+
+
+
+</RelativeLayout>
